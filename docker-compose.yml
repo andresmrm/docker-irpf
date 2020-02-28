@@ -1,12 +1,12 @@
-version: '2'
+version: '3'
 services:
   irpf:
-    container_name: irpf
-    image: caixote/irpf
+    container_name: irpf2020
     build: .
+    working_dir: /opt/IRPF2020
     environment:
       - DISPLAY=${DISPLAY}
       - _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      # - ~/ProgramasRFB:/home/irpf/ProgramasRFB
+      # - ~/Documents/IRPF/2020:/home/irpf/ProgramasRFB
